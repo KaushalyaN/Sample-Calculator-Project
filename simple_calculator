@@ -31,6 +31,17 @@ addition() {
 }
 
 
+# Function to perform subtraction
+subtraction() {
+    echo -n "Enter first number: "
+    read num1
+    echo -n "Enter second number: "
+    read num2
+    result=$(echo "$num1 - $num2" | bc)
+    echo "Result: $result"
+}
+
+
 # Main script logic
 while true; do
     display_functions
@@ -56,5 +67,5 @@ while true; do
             echo "Invalid choice, please choose a number between 1 and 5."
             ;;
     esac
-    echo "******************************"
+    echo "---------------------------------"
 done
