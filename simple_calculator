@@ -1,0 +1,60 @@
+#!/bin/bash
+
+##############################################
+# Author: Kaushalya Nilangani
+# Date: 3rd June 2024
+# Version: V1
+# This script is for a simple calculator.
+##############################################
+
+# Function to display the functions
+display_functions() {
+    echo "Simple Calculator"
+    echo "*******************"
+    echo "1. Addition"
+    echo "2. Subtraction"
+    echo "3. Multiplication"
+    echo "4. Division"
+    echo "5. Exit"
+    echo "*******************"
+    echo -n "Please choose an option [1-5]: "
+}
+
+# Function to perform addition
+addition() {
+    echo -n "Enter your first number: "
+    read num1
+    echo -n "Enter your second number: "
+    read num2
+    result=$(echo "$num1 + $num2" | bc)  
+    echo "Result: $result"
+}
+
+
+# Main script logic
+while true; do
+    display_functions
+    read choice
+    case $choice in
+        1)
+            addition
+            ;;
+        2)
+            subtraction
+            ;;
+        3)
+            multiplication
+            ;;
+        4)
+            division
+            ;;
+        5)
+            echo "Exiting..."
+            break
+            ;;
+        *)
+            echo "Invalid choice, please choose a number between 1 and 5."
+            ;;
+    esac
+    echo "******************************"
+done
