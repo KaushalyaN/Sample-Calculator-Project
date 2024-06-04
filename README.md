@@ -4,7 +4,8 @@ This repository contains a simple command-line calculator implemented in Bash. I
 
 ## Usage
 
-To use the calculator, simply run the `calculator.sh` script in your terminal. Follow the on-screen instructions to choose the operation and input the numbers.
+To use the calculator, simply run the `simple calculator` script in the terminal. Follow the on-screen instructions to choose the operation and input the numbers.
 
 ```bash
-./calculator.sh
+./simple calculator
+
